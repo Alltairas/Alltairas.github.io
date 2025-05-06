@@ -1,8 +1,3 @@
----
-layout: home
-title: Welcome to My Site!
----
-
 # 👋 Welcome to My Awesome Site
 
 Hello! This is my personal website.

@@ -14,7 +14,7 @@ I chose the *Minimal* theme for its clean, distraction-free design. It lets the 
 
 ## Get in Touch
 
-Feel free to [open an issue](https://github.com/YOUR-USERNAME/YOUR-REPO/issues) or connect with me via [GitHub](https://github.com/YOUR-USERNAME).
+Feel free to [open an issue](https://github.com/YOUR-USERNAME/YOUR-REPO/issues) or connect with me via [GitHub](https://github.com/Alltairas).
 
 ---
 

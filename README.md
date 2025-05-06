@@ -4,7 +4,7 @@ Hello! This is my personal website.
 ## About This Site
 
 Here, you'll find:
-- **Projects:** My latest coding projects and experiments
+- **Projects:** My latest coding projects and experiments: [Notion Page](https://fantasy-polyanthus-f0e.notion.site/Projects-Tasks-120516fda5438087a49fedac3b6c3083)
 - **Blog:** Occasional thoughts and tutorials on web development, programming, and technology
 - **Contact:** How to reach me
 

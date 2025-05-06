@@ -8,10 +8,6 @@ Here, you'll find:
 - **Blog:** Occasional thoughts and tutorials on web development, programming, and technology
 - **Contact:** How to reach me
 
-## Why Minimal?
-
-I chose the *Minimal* theme for its clean, distraction-free design. It lets the content shine and is easy to customize.
-
 ## Get in Touch
 
 Feel free to [open an issue](https://github.com/YOUR-USERNAME/YOUR-REPO/issues) or connect with me via [GitHub](https://github.com/Alltairas), or [LinkedIn](https://fr.linkedin.com/in/aras-selahiye-667079134)

@@ -10,8 +10,8 @@ Here, you'll find:
 
 ## Get in Touch
 
-Feel free to [open an issue](https://github.com/YOUR-USERNAME/YOUR-REPO/issues) or connect with me via [GitHub](https://github.com/Alltairas), or [LinkedIn](https://fr.linkedin.com/in/aras-selahiye-667079134)
-
+Feel free to [open an issue](https://github.com/YOUR-USERNAME/YOUR-REPO/issues) or connect with me via [GitHub](https://github.com/Alltairas), or [LinkedIn](https://fr.linkedin.com/in/aras-selahiye-667079134)  
+Feel free to check out my [CV](https://github.com/Alltairas/Alltairas.github.io/tree/main/CVarasEN.pdf)
 ---
 
 *Thanks for visiting! Stay tuned for updates.*

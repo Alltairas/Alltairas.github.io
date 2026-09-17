@@ -34,8 +34,6 @@ and data acquisition implemented in LabVIEW.
 
 :material-file-document-outline: [Designing a Photothermal Deflection Detector](https://www.researchgate.net/publication/385172650_Designing_a_Photothermal_Deflection_Detector){: target="_blank" } — ResearchGate
 
----
-
 More project write-ups, and a running list of side projects and experiments, are on my
 [Notion page](https://fantasy-polyanthus-f0e.notion.site/Projects-Tasks-120516fda5438087a49fedac3b6c3083) and on
 [GitHub](https://github.com/Alltairas?tab=repositories).

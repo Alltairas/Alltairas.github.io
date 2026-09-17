@@ -2,10 +2,10 @@
 
 I'm a physicist working at the point where optical systems meet machine learning.
 
-My path started in classical physics — quantum mechanics, electromagnetism, optics — during a Bachelor's and
+My path started in classical physics (quantum mechanics, electromagnetism, optics) during a Bachelor's and
 Master's at Université Claude Bernard Lyon 1, with a specialisation in optics and photonics. Along the way I kept
 finding myself gravitating toward the instrumentation side: building detectors, calibrating optical benches,
-writing acquisition software — and, increasingly, toward the data that instruments produce and what machine
+writing acquisition software, and increasingly toward the data that instruments produce and what machine
 learning can do with it.
 
 That pull is why I picked up a second Master's in Computer Science alongside the physics degree, and why my last

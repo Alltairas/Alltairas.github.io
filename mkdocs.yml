@@ -35,6 +35,7 @@ nav:
   - Projects: projects.md
   - Demos:
       - ISS Tracker: demos/iss-tracker.md
+      - Movie Showtimes: demos/movies.md
   - Blog: blog/index.md
   - Contact: contact.md
 
@@ -54,10 +55,12 @@ plugins:
 
 extra_css:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
+  - assets/css/terminal.css
 
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - assets/js/iss-tracker.js
+  - assets/js/movies-terminal.js
 
 extra:
   social:

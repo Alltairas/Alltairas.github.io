@@ -11,13 +11,13 @@ learning can do with it.
 That pull is why I picked up a second Master's in Computer Science alongside the physics degree, and why my last
 few research placements have all sat at that intersection: refactoring a legacy Mueller-matrix polarimetry pipeline
 at ICube, training CNNs on clinical imaging data at Poladerme, running DFT and neural-network workflows on STM data
-at Institut Lumière Matière. Common thread: physical measurement in, model out.
+at Institut Lumière Matière.
 
-Before the research track, I spent time on the hardware and test side — calibrating thermal imaging systems and
-laser range finders at a defence electro-optics manufacturer in Istanbul. It's part of why I care about the full
-chain from photons to pixels to predictions, not just the modelling layer.
+Before my time at internships at laboratories, I spent time on the hardware and test side, calibrating thermal
+imaging systems and laser range finders at a defence electro-optics manufacturer in Istanbul. It's part of why I
+care about the full chain from photons to pixels to predictions.
 
-Outside of work: I do improv/clown, I'm a member of my university's fablab society, and when I can I'm cycling,
-sailing, or diving (PADI certified).
+Outside of work: I did theatre for 3 years during undergrad, I'm a member of my university's Fablab society, and
+when I can I'm cycling, salsa'ing, sailing, or diving (preferably during summertime).
 
 See the [full CV](index.md) for the detailed experience and education history, or [get in touch](contact.md).

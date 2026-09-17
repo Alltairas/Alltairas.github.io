@@ -1,0 +1,59 @@
+site_name: Aras Selahiye
+site_description: Photonics and data engineer — optics, photonics, and machine learning for imaging.
+site_url: https://alltairas.github.io/
+repo_url: https://github.com/Alltairas/Alltairas.github.io
+repo_name: Alltairas/Alltairas.github.io
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+    - content.code.copy
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Projects: projects.md
+  - Blog: blog/index.md
+  - Contact: contact.md
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Alltairas
+    - icon: fontawesome/brands/linkedin
+      link: https://fr.linkedin.com/in/aras-selahiye-667079134
+    - icon: fontawesome/solid/envelope
+      link: mailto:aras.selahiye@hotmail.com
+
+copyright: Copyright &copy; Aras Selahiye

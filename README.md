@@ -1,17 +1,26 @@
-# 👋 Welcome to My Awesome Site
+# Alltairas.github.io
 
-Hello! This is my personal website.
-## About This Site
+Personal site — CV, projects, and occasional blog posts — built with [MkDocs](https://www.mkdocs.org/) and the
+[Material](https://squidfunk.github.io/mkdocs-material/) theme, deployed to GitHub Pages via GitHub Actions.
 
-Here, you'll find:
-- **Projects:** My latest coding projects and experiments: [Notion Page](https://fantasy-polyanthus-f0e.notion.site/Projects-Tasks-120516fda5438087a49fedac3b6c3083)
-- **Blog:** Occasional thoughts and tutorials on web development, programming, and technology
-- **Contact:** How to reach me
+Live at **https://alltairas.github.io/**
 
-## Get in Touch
+## Local development
 
-Feel free to [open an issue](https://github.com/YOUR-USERNAME/YOUR-REPO/issues) or connect with me via [GitHub](https://github.com/Alltairas), or [LinkedIn](https://fr.linkedin.com/in/aras-selahiye-667079134)  
-Feel free to check out my [CV](https://github.com/Alltairas/Alltairas.github.io/tree/main/CVarasEN.pdf)
----
+```bash
+pip install -r requirements.txt
+mkdocs serve
+```
 
-*Thanks for visiting! Stay tuned for updates.*
+Then open http://127.0.0.1:8000/.
+
+## Structure
+
+- `mkdocs.yml` — site config, theme, nav
+- `docs/` — page content (Markdown)
+- `.github/workflows/deploy.yml` — builds and pushes to `gh-pages` on every push to `main`
+
+## Deployment
+
+Pushing to `main` triggers the GitHub Action, which runs `mkdocs gh-deploy` and publishes the built site to the
+`gh-pages` branch. GitHub Pages is configured (Settings → Pages) to serve from that branch.

@@ -16,17 +16,23 @@ Deep-learning pipeline for skin cancer lesion classification and segmentation wi
 pipeline of 74,000+ medical images. Includes a correlation study linking polarimetric parameters to Mueller
 matrix coefficients.
 
+:material-file-document-outline: [Searching the best CNN Model for image classification of cancerous skin lesions](https://www.researchgate.net/publication/395742260_Searching_the_best_CNN_Model_for_image_classification_of_cancerous_skin_lesions){: target="_blank" } — ResearchGate
+
 ## Borophene allotrope identification from STM imaging
 *Institut Lumière Matière, UMR 5306 CNRS — 2024*
 
 Interactive tool identifying borophene allotropes from experimental STM images, built on DFT and
 molecular-dynamics simulations (VASP) with an automated deep-learning workflow over the resulting data.
 
+:material-file-document-outline: [Training a Neural Network for Bypassing Density Functional Theory computations](https://www.researchgate.net/publication/385172716_Subject_Training_a_Neural_Network_for_Bypassing_Density_Functional_Theory_computations){: target="_blank" } — ResearchGate
+
 ## Opto-electronic detector for photothermal deflection spectroscopy
 *Institut Lumière Matière, UMR 5306 CNRS — 2022*
 
 Designed and built an opto-electronic detector to quantify probe-beam displacement, with instrument interfacing
 and data acquisition implemented in LabVIEW.
+
+:material-file-document-outline: [Designing a Photothermal Deflection Detector](https://www.researchgate.net/publication/385172650_Designing_a_Photothermal_Deflection_Detector){: target="_blank" } — ResearchGate
 
 ---
 

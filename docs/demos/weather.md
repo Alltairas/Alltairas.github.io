@@ -2,8 +2,7 @@
 
 A live choropleth of current temperature across all 96 metropolitan French départements, drawn in your browser
 from a single API call. It's a port of `HeatMap_France.ipynb` from [weather_map](https://github.com/Alltairas/APIs/tree/main/weather_map){: target="_blank" },
-which built the same map in a notebook — one OpenWeatherMap request per département, authenticated with a
-personal key read off my disk. That key is what kept it off this site.
+which built the same map in a notebook.
 
 <div id="weather-map"></div>
 
@@ -11,6 +10,9 @@ personal key read off my disk. That key is what kept it off this site.
 
 <!--
 Background notes on this port, kept out of the rendered page.
+
+The notebook made one OpenWeatherMap request per département, authenticated with a personal key
+read off my disk. That key is what kept it off this site.
 
 The replacement is Open-Meteo (https://open-meteo.com/): no key, no sign-up, and permissive
 CORS headers, so the page can call it directly instead of proxying through a backend. It accepts

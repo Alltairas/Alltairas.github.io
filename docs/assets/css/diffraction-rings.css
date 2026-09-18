@@ -1,0 +1,140 @@
+/* Powder diffraction ring simulator.
+   Chrome — controls, banner, captions — is built on Material's own custom
+   properties so the slate scheme follows without a parallel set of rules.
+   The data colours are NOT themed and are not stated here at all: ring colour
+   encodes intensity and the detector image is a fixed inferno ramp, both owned
+   by diffraction-rings.js. A rule here restating either would let the legend
+   and the pixels drift apart. */
+
+/* ---- controls -------------------------------------------------------- */
+
+.xrd-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 0.9rem 1.2rem;
+  align-items: start;
+  margin: 1.2rem 0 0.9rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  background: var(--md-code-bg-color);
+}
+
+.xrd-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.xrd-field > label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.xrd-field select {
+  width: 100%;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.72rem;
+  font-family: inherit;
+  color: var(--md-typeset-color);
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.xrd-field select:focus-visible {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: 1px;
+}
+
+/* The filter is not a free choice: it is the Z-1/Z-2 partner of whichever target
+   is selected, so the control is a switch on a fixed element, not a third list. */
+.xrd-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.xrd-toggle input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--md-accent-fg-color, #3f6fd8);
+  cursor: pointer;
+}
+
+.xrd-note {
+  font-size: 0.62rem;
+  line-height: 1.45;
+  opacity: 0.75;
+}
+
+/* ---- fluorescence banner --------------------------------------------- */
+/* Five graded levels. Only moderate and strong are alarming; "negligible" means
+   the edge was cleared but the emitted line never reaches the detector, which is
+   a footnote rather than a problem, so it must not read as a warning. */
+
+.xrd-banner {
+  margin: 0.4rem 0 1rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.7rem;
+  line-height: 1.55;
+  border-left: 3px solid var(--md-default-fg-color--lighter);
+  border-radius: 0 4px 4px 0;
+  background: var(--md-code-bg-color);
+}
+
+.xrd-fluo-none        { border-left-color: #2e9e5b; }
+.xrd-fluo-negligible  { border-left-color: #2e9e5b; }
+.xrd-fluo-weak        { border-left-color: #c8a020; }
+.xrd-fluo-moderate    { border-left-color: #e07b20; }
+.xrd-fluo-strong      { border-left-color: #d03b3b; }
+
+/* ---- figures --------------------------------------------------------- */
+
+.xrd-views {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.1rem;
+  margin-bottom: 1.1rem;
+}
+
+.xrd-figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.xrd-figure canvas {
+  display: block;
+  width: 100%;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  /* The detector image paints its own black field; give the ring canvas a themed
+     surface underneath so an empty frame still reads as deliberate. */
+  background: var(--md-default-bg-color);
+}
+
+.xrd-caption {
+  font-size: 0.62rem;
+  line-height: 1.45;
+  opacity: 0.72;
+}
+
+.xrd-caption strong {
+  opacity: 0.9;
+}
+
+#xrd-source {
+  font-size: 0.66rem;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}

@@ -37,6 +37,7 @@ nav:
       - ISS Tracker: demos/iss-tracker.md
       - Movie Showtimes: demos/movies.md
       - France Temperature Map: demos/weather.md
+      - Powder Diffraction Rings: demos/diffraction.md
   - Blog: blog/index.md
   - Contact: contact.md
 
@@ -60,12 +61,14 @@ extra_css:
   - assets/css/profile.css
   - assets/css/iss-tracker.css
   - assets/css/weather-map.css
+  - assets/css/diffraction-rings.css
 
 extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - assets/js/iss-tracker.js
   - assets/js/movies-terminal.js
   - assets/js/weather-map.js
+  - assets/js/diffraction-rings.js
 
 extra:
   social:

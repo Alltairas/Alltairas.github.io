@@ -6,15 +6,22 @@
   if (!mapEl || typeof L === 'undefined') return;
 
   const map = L.map(mapEl).setView([0, 0], 2);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+  // CARTO's basemaps now watermark every tile with "API KEY REQUIRED", so serve
+  // straight from OpenStreetMap instead — no key, no sign-up. Single host rather
+  // than the old {s} subdomain rotation, and no {r} since OSM has no @2x tiles.
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 19,
   }).addTo(map);
 
-  const issIcon = L.divIcon({
-    html: '🛰️', // satellite emoji
+  // Absolute path: this script runs in the context of /demos/iss-tracker/, so a
+  // relative URL would resolve against that page rather than the asset root.
+  // Safe here because the site is a GitHub user page served from the domain root.
+  const issIcon = L.icon({
+    iconUrl: '/assets/img/iss.svg',
+    iconSize: [60, 38],
+    iconAnchor: [30, 19], // centre the station on its actual coordinates
     className: 'iss-marker-icon',
-    iconSize: [28, 28],
   });
 
   const marker = L.marker([0, 0], { icon: issIcon }).addTo(map);

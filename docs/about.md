@@ -1,3 +1,5 @@
+![Portrait of Aras Selahiye](assets/img/profil.png){ .profile-photo }
+
 # About
 
 I'm a physicist working at the point where optical systems meet machine learning.

@@ -1,3 +1,5 @@
+![Portrait of Aras Selahiye](assets/img/profil.png){ .profile-photo }
+
 # Aras Selahiye
 
 ### Photonics and Data Engineer

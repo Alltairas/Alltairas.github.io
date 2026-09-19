@@ -1,0 +1,52 @@
+/* Terminal-style UI shared by browser demos (movie showtimes query, etc). */
+.term-box {
+  background: #10131a;
+  color: #d6e2ea;
+  border-radius: 6px;
+  font-family: var(--md-code-font, "Roboto Mono", monospace);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  overflow: hidden;
+  border: 1px solid #2a2f3a;
+}
+
+.term-output {
+  padding: 1rem;
+  max-height: 480px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.term-output a {
+  color: #7ec4ff;
+}
+
+.term-inputline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-top: 1px solid #2a2f3a;
+  background: #0b0d12;
+}
+
+.term-prompt {
+  color: #6cd67a;
+  white-space: nowrap;
+}
+
+.term-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #d6e2ea;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.term-dim { color: #7a8494; }
+.term-genre { color: #f0c674; }
+.term-title { color: #ffffff; font-weight: 700; }
+.term-error { color: #ff6b6b; }

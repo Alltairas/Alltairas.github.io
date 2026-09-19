@@ -8,6 +8,8 @@ biomarker extraction, with a Python metadata layer, run on a clinical dataset of
 statistical validation framework for inter-calibration drift and a semantic segmentation model distinguishing
 cervix epithelial types.
 
+:material-file-document-outline: [Mueller-matrix reconstruction and biomarker extraction for cervical tissue](https://drive.google.com/file/d/1RD9jjvR2I5S9LohQI7koc1HDJ3aqIAGA/view?usp=sharing){: target="_blank" } — M2 defence slides (Google Drive)
+
 ## Cancer lesion classification & segmentation
 *Poladerme Deep Skin Reading (ARCHOS group) — 2025*
 

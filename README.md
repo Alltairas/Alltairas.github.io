@@ -1,9 +1,19 @@
 # Alltairas.github.io
 
-Personal site — CV, projects, and occasional blog posts — built with [MkDocs](https://www.mkdocs.org/) and the
-[Material](https://squidfunk.github.io/mkdocs-material/) theme, deployed to GitHub Pages via GitHub Actions.
+Personal site with my CV, projects, interactive demos and occasional blog posts. Built with
+[MkDocs](https://www.mkdocs.org/) and the [Material](https://squidfunk.github.io/mkdocs-material/) theme,
+and deployed to GitHub Pages with GitHub Actions.
 
-Live at **https://alltairas.github.io/**
+**Live:** https://alltairas.github.io/
+
+## Interactive demos
+
+| Demo | Based on |
+|------|----------|
+| Weather map of France | [`APIs/weather_map`](https://github.com/Alltairas/APIs) |
+| Strasbourg cinema showtimes (terminal-style) | [`APIs/movie_seanses`](https://github.com/Alltairas/APIs) |
+| Live ISS tracker | [`APIs/iss_tracker_API`](https://github.com/Alltairas/APIs) |
+| X-ray diffraction rings | [`Physics-simulations-and-graphs`](https://github.com/Alltairas/Physics-simulations-and-graphs) |
 
 ## Local development
 
@@ -16,11 +26,16 @@ Then open http://127.0.0.1:8000/.
 
 ## Structure
 
-- `mkdocs.yml` — site config, theme, nav
-- `docs/` — page content (Markdown)
-- `.github/workflows/deploy.yml` — builds and pushes to `gh-pages` on every push to `main`
+```
+mkdocs.yml                     Site config, theme, navigation
+docs/                          Page content (Markdown)
+├── demos/                     One page per interactive demo
+├── blog/
+└── assets/                    CSS, JS for the demos, images, CV (PDF), GeoJSON data
+.github/workflows/deploy.yml   Build + deploy on every push to main
+```
 
 ## Deployment
 
-Pushing to `main` triggers the GitHub Action, which runs `mkdocs gh-deploy` and publishes the built site to the
-`gh-pages` branch. GitHub Pages is configured (Settings → Pages) to serve from that branch.
+Every push to `main` triggers the GitHub Action, which runs `mkdocs gh-deploy` and publishes the built site
+to the `gh-pages` branch. GitHub Pages serves the site from that branch (Settings → Pages).

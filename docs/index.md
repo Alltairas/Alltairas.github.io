@@ -33,6 +33,9 @@ MATLAB.
 - Designed a statistical validation framework quantifying inter-calibration drift.
 - Built a semantic segmentation model for polarimetric images, distinguishing cervix epithelial types.
 
+:material-file-document-outline: [Mueller-matrix reconstruction and biomarker extraction for cervical tissue](https://drive.google.com/file/d/1RD9jjvR2I5S9LohQI7koc1HDJ3aqIAGA/view?usp=sharing){: target="_blank" } — M2 defence slides (Google Drive)
+{ .report-link }
+
 ### Polarimetric Imaging & Deep Learning, Research Intern
 **Poladerme Deep Skin Reading**, startup owned by ARCHOS group · Strasbourg, France · Mar to Sep 2025
 

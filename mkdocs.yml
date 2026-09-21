@@ -62,6 +62,7 @@ extra_css:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
   - assets/css/terminal.css
   - assets/css/profile.css
+  - assets/css/header-banner.css
   - assets/css/mobile-nav.css
   - assets/css/demo-cards.css
   - assets/css/report-links.css

@@ -1,0 +1,47 @@
+/* Banner image behind the title bar and the tab strip.
+
+   They are two elements (the header is sticky, the tabs scroll away under it),
+   so each carries its own copy of the image. Both copies are sized to the
+   viewport width and centred on the same band, with the tab strip's copy
+   shifted up by the header's 2.4rem so the picture runs on unbroken. */
+:root {
+  /* 20rem floor: at 1366 × 341 the image must be at least 4× the 4.8rem
+     header-plus-tabs height wide, or a narrow phone would see it end. */
+  --banner-width: max(100vw, 20rem);
+  --banner-height: calc(var(--banner-width) * 341 / 1366);
+  --banner-top: calc((4.8rem - var(--banner-height)) / 2);
+  /* Takes the edge off the bright dots and lines; the halo below does the rest. */
+  --banner-shade: rgb(0 0 0 / 35%);
+}
+
+.md-header,
+.md-tabs {
+  background-image:
+    linear-gradient(var(--banner-shade), var(--banner-shade)),
+    url("../img/header-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%, var(--banner-width) auto;
+}
+
+.md-header {
+  background-position: 0 0, center var(--banner-top);
+}
+
+.md-tabs {
+  background-position: 0 0, center calc(var(--banner-top) - 2.4rem);
+}
+
+/* A soft dark halo under the white labels, so a tab that lands on the dense
+   cluster of dots stays readable without darkening the whole picture. */
+.md-header__title,
+.md-header__button,
+.md-header__source,
+.md-tabs__link {
+  text-shadow: 0 0 .1rem rgb(0 0 0 / 90%), 0 0 .5rem rgb(0 0 0 / 80%);
+}
+
+.md-header__button svg,
+.md-header__source svg,
+.md-tabs__link svg {
+  filter: drop-shadow(0 0 .2rem rgb(0 0 0 / 80%));
+}

@@ -8,6 +8,7 @@ Dual MSc: Optics & Photonics + Computer Science · Machine learning for imaging 
 
 [:material-file-download: Download CV (PDF)](assets/Aras_SELAHIYE_CV_EN.pdf){ .md-button .md-button--primary }
 [:material-email: Contact](contact.md){ .md-button }
+[:material-play-circle-outline: Live demos](demos/index.md){ .md-button }
 
 +33 (0)7 82 39 24 76 · [aras.selahiye@hotmail.com](mailto:aras.selahiye@hotmail.com) · [linkedin/aras-selahiye](https://fr.linkedin.com/in/aras-selahiye-667079134) · [github.com/Alltairas](https://github.com/Alltairas)
 
@@ -42,6 +43,9 @@ MATLAB.
   optimisation cut runtime 30× versus prior implementations.
 - Ran a correlation study linking polarimetric parameters to Mueller matrix coefficients.
 
+:material-file-document-outline: [Searching the best CNN Model for image classification of cancerous skin lesions](https://www.researchgate.net/publication/395742260_Searching_the_best_CNN_Model_for_image_classification_of_cancerous_skin_lesions){: target="_blank" } — ResearchGate
+{ .report-link }
+
 ### Computational Physics & Deep Learning on STM Imaging, Research Intern
 **Institut Lumière Matière, UMR 5306 CNRS** · Lyon, France · Feb to Aug 2024
 
@@ -49,12 +53,18 @@ MATLAB.
 - Ran DFT and molecular-dynamics computation in VASP; automated deep-learning workflows over MD data in Python
   and Bash.
 
+:material-file-document-outline: [Training a Neural Network for Bypassing Density Functional Theory computations](https://www.researchgate.net/publication/385172716_Subject_Training_a_Neural_Network_for_Bypassing_Density_Functional_Theory_computations){: target="_blank" } — ResearchGate
+{ .report-link }
+
 ### Opto-Electronic Detector Development & Photothermal Spectroscopy, Scientific Assistant (Intern)
 **Institut Lumière Matière, UMR 5306 CNRS** · Lyon, France · May to Jun 2022
 
 - Designed and built an opto-electronic detector for photothermal deflection spectroscopy, quantifying probe-beam
   displacement.
 - Implemented instrument interfacing and data acquisition in LabVIEW.
+
+:material-file-document-outline: [Designing a Photothermal Deflection Detector](https://www.researchgate.net/publication/385172650_Designing_a_Photothermal_Deflection_Detector){: target="_blank" } — ResearchGate
+{ .report-link }
 
 ### Electro-Optic System Test & Calibration, Optics R&D Intern
 **Transvaro Electron Tools**, defence electro-optics (thermal imagers, weapon sights) · Istanbul, Türkiye · Jun to Jul 2021

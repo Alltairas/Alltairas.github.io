@@ -35,3 +35,11 @@
     margin: 0 auto 1.25rem;
   }
 }
+
+/* The hero buttons (CV, Contact, Live demos) wrap onto a second row on a phone;
+   Material gives them no vertical margin, so the rows would sit edge to edge. */
+.md-typeset p:has(> .md-button) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}

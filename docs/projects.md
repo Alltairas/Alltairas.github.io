@@ -11,7 +11,7 @@ cervix epithelial types.
 :material-file-document-outline: [Mueller-matrix reconstruction and biomarker extraction for cervical tissue](){: target="_blank" } — M2 defence slides (Google Drive)
 { .report-link }
 
-## Cancer lesion classification & segmentation
+## Cancer lesion classification 
 *Poladerme Deep Skin Reading (ARCHOS group) — 2025*
 
 Deep-learning pipeline for skin cancer lesion classification and segmentation with transfer learning

@@ -1,0 +1,45 @@
+/* Profile headshot, floated to the top-right of the Home and About pages. */
+.md-typeset .profile-photo {
+  float: right;
+  width: 180px;
+  max-width: 40%;
+  margin: 0 0 1rem 1.5rem;
+  border-radius: 8px;
+  /* The photo has a pure white background and Material's light scheme page
+     background is also #fff, so the border is what gives it an edge at all.
+     --lighter (32% alpha) rather than --lightest (12%), which is invisible here. */
+  border: 1px solid var(--md-default-fg-color--lighter);
+  box-shadow: 0 2px 6px rgb(0 0 0 / 15%);
+}
+
+/* On the slate scheme the white background is glaring instead of invisible;
+   take a little off it. Drop this rule to render the photo at full brightness. */
+[data-md-color-scheme="slate"] .md-typeset .profile-photo {
+  filter: brightness(0.94);
+}
+
+/* The image is alone in its own <p>; collapse that wrapper so the float starts
+   flush with the top of the content instead of an em lower. */
+.md-typeset p:has(> .profile-photo) {
+  margin: 0;
+}
+
+/* Below Material's small breakpoint, stack it above the title instead of
+   squeezing the text into a narrow column beside it. */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .profile-photo {
+    float: none;
+    display: block;
+    width: 150px;
+    max-width: 60%;
+    margin: 0 auto 1.25rem;
+  }
+}
+
+/* The hero buttons (CV, Contact, Live demos) wrap onto a second row on a phone;
+   Material gives them no vertical margin, so the rows would sit edge to edge. */
+.md-typeset p:has(> .md-button) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}

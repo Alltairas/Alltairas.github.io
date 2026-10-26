@@ -1,0 +1,11 @@
+/* ISS marker on the tracker map.
+   The source SVG is a flat #333 silhouette, which sinks into OpenStreetMap's
+   darker forest-green and water-blue fills. Stacked white drop-shadows build a
+   thin halo around the outline so the station stays readable over any tile,
+   with a soft dark shadow underneath to lift it off the map. */
+.iss-marker-icon {
+  filter:
+    drop-shadow(0 0 1px #fff)
+    drop-shadow(0 0 2px #fff)
+    drop-shadow(0 1px 3px rgb(0 0 0 / 45%));
+}

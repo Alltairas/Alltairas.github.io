@@ -1,0 +1,125 @@
+/* France temperature choropleth (weather_map port).
+   Chrome — legend, tooltip, status line — is built on Material's own custom
+   properties, so the slate scheme follows without a parallel set of rules. The
+   ramp itself is deliberately NOT themed: the basemap under the polygons is the
+   same in light and dark, so recolouring the data by scheme would only break the
+   agreement between a fill and its legend swatch. */
+
+#weather-map {
+  height: 520px;
+  border-radius: 4px;
+  /* Leaflet paints tiles over the page background; give it a surface of its own
+     so the frame reads as deliberate in both schemes. */
+  background: var(--md-default-bg-color);
+  z-index: 0; /* keep tiles and controls under Material's header and search */
+}
+
+/* ---- legend ---------------------------------------------------------- */
+
+.wx-legend {
+  background: var(--md-default-bg-color);
+  color: var(--md-typeset-color);
+  padding: 0.5rem 0.6rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+  font-size: 0.62rem;
+  line-height: 1.35;
+}
+
+.wx-legend-title {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  white-space: nowrap;
+}
+
+.wx-legend-scale {
+  display: flex;
+  gap: 0.35rem;
+  height: 7rem;
+}
+
+/* The bar's gradient is written inline by the script, sampled from the same
+   colourAt() that fills the polygons — nothing here may restate a colour. */
+.wx-legend-bar {
+  width: 0.85rem;
+  flex: none;
+  border-radius: 2px;
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 45%);
+}
+
+.wx-legend-ticks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-variant-numeric: tabular-nums;
+  /* Labels mark the 5 sampled anchors, so they sit against the gradient at the
+     temperature they name rather than floating between steps. */
+  line-height: 1;
+}
+
+/* ---- tooltip --------------------------------------------------------- */
+
+.wx-tooltip.leaflet-tooltip {
+  background: var(--md-default-bg-color);
+  color: var(--md-typeset-color);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 35%);
+  font-size: 0.66rem;
+  line-height: 1.45;
+  padding: 0.4rem 0.55rem;
+  white-space: nowrap;
+}
+
+/* Leaflet draws the callout arrow with border colours, which the rules above
+   leave pointing at the old white; re-point it at the themed surface. */
+.wx-tooltip.leaflet-tooltip-top::before { border-top-color: var(--md-default-bg-color); }
+.wx-tooltip.leaflet-tooltip-bottom::before { border-bottom-color: var(--md-default-bg-color); }
+.wx-tooltip.leaflet-tooltip-left::before { border-left-color: var(--md-default-bg-color); }
+.wx-tooltip.leaflet-tooltip-right::before { border-right-color: var(--md-default-bg-color); }
+
+.wx-code {
+  font-family: var(--md-code-font, "Roboto Mono", monospace);
+  font-size: 0.85em;
+  opacity: 0.6;
+}
+
+.wx-temp {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.wx-feels,
+.wx-sky {
+  opacity: 0.75;
+}
+
+.wx-nodata {
+  opacity: 0.6;
+  font-style: italic;
+}
+
+/* ---- status line ----------------------------------------------------- */
+
+#weather-status {
+  margin-top: 1rem;
+}
+
+.wx-error {
+  color: var(--md-typeset-color);
+  border-left: 3px solid #d03b3b;
+  padding-left: 0.6rem;
+  display: inline-block;
+}
+
+/* Leaflet's attribution defaults to opaque white, which glares in slate. Scoped to
+   this map: iss-tracker.css owns the ISS map's chrome, and a bare
+   .leaflet-control-attribution rule here would reach across and restyle it. */
+[data-md-color-scheme="slate"] #weather-map .leaflet-control-attribution {
+  background: rgb(0 0 0 / 60%);
+  color: var(--md-typeset-color);
+}
+
+[data-md-color-scheme="slate"] #weather-map .leaflet-control-attribution a {
+  color: var(--md-typeset-a-color);
+}

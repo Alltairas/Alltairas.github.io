@@ -1,0 +1,17 @@
+/* Paper and report links under each entry on Home (Professional Experience)
+   and Projects. Set off in a box so they don't read as one more bullet point. */
+.md-typeset p.report-link {
+  margin: .8em 0 1.2em;
+  padding: .45em .8em;
+  border-left: .2rem solid var(--md-typeset-a-color);
+  border-radius: .1rem;
+  background-color: color-mix(in srgb, var(--md-typeset-a-color) 8%, transparent);
+}
+
+.md-typeset p.report-link a {
+  font-weight: 700;
+}
+
+.md-typeset p.report-link .twemoji {
+  color: var(--md-typeset-a-color);
+}

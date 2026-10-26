@@ -1,0 +1,75 @@
+/* Phone and tablet navigation.
+
+   Material hides the whole tab bar below 76.25em (1220px) and folds the search
+   field into a bare magnifier below 60em, so on a phone the header is two
+   unlabelled icons and nothing says the site has more than one page. These
+   rules keep the tabs on screen as a swipeable strip and turn the two icons
+   into labelled buttons. mobile-nav.js adds the edge fades. */
+
+@media screen and (max-width: 76.234375em) {
+  .md-tabs {
+    display: block;
+  }
+
+  /* Spacing, and the "you are here" marker, now come from header-tabs.css:
+     the active tab is the pill with the brighter fill, which carries further
+     on a small screen than the underline that used to sit here. */
+
+  /* Set by mobile-nav.js while tabs are hidden past that edge. */
+  .md-tabs__list--more-right {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+            mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+  }
+  .md-tabs__list--more-left {
+    -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 2.5rem), transparent);
+            mask-image: linear-gradient(to left, #000 calc(100% - 2.5rem), transparent);
+  }
+  .md-tabs__list--more-left.md-tabs__list--more-right {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
+            mask-image: linear-gradient(to right, transparent, #000 2.5rem, #000 calc(100% - 2.5rem), transparent);
+  }
+
+  /* Header buttons as pills, so they read as controls rather than decoration.
+     The header is always primary-coloured with --md-primary-bg-color text, in
+     both schemes, so a translucent wash of the text colour works on either. */
+  .md-header__button[for="__drawer"] {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    padding: .3rem .6rem .3rem .4rem;
+    border-radius: 1rem;
+    background-color: color-mix(in srgb, var(--md-primary-bg-color) 16%, transparent);
+  }
+  .md-header__button[for="__drawer"]::after {
+    content: "Menu";
+    font-size: .7rem;
+    font-weight: 700;
+  }
+}
+
+/* Below 400px the header can't fit both labels and still show a few letters of
+   the title; the Menu pill keeps its shape and drops the word. */
+@media screen and (max-width: 24.984375em) {
+  .md-header__button[for="__drawer"] {
+    padding: .3rem;
+  }
+  .md-header__button[for="__drawer"]::after {
+    content: none;
+  }
+}
+
+@media screen and (max-width: 59.984375em) {
+  .md-header__button[for="__search"] {
+    display: inline-flex;
+    align-items: center;
+    gap: .3rem;
+    padding: .3rem .7rem .3rem .5rem;
+    border-radius: 1rem;
+    background-color: color-mix(in srgb, var(--md-primary-bg-color) 16%, transparent);
+  }
+  .md-header__button[for="__search"]::after {
+    content: "Search";
+    font-size: .7rem;
+    font-weight: 700;
+  }
+}

@@ -38,7 +38,7 @@ nav:
   - Demos:
       - demos/index.md
       - ISS Tracker: demos/iss-tracker.md
-      - Movie Showtimes: demos/movies.md
+      # - Movie Showtimes: demos/movies.md   # parked, see exclude_docs below
       - France Temperature Map: demos/weather.md
       - Powder Diffraction Rings: demos/diffraction.md
   - Contact: contact.md
@@ -54,12 +54,21 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
+# Parked pages: kept in docs/ but never built, so they are not published,
+# not searchable and not in sitemap.xml. To bring one back: drop it from
+# this list, uncomment its nav and asset lines above, and restore its card
+# in docs/demos/index.md from git history.
+exclude_docs: |
+  demos/movies.md
+  assets/js/movies-terminal.js
+  assets/css/terminal.css
+
 plugins:
   - search
 
 extra_css:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.css
-  - assets/css/terminal.css
+  # - assets/css/terminal.css          # only the parked movies demo uses this
   - assets/css/profile.css
   - assets/css/header-banner.css
   - assets/css/header-tabs.css
@@ -74,7 +83,7 @@ extra_javascript:
   - https://unpkg.com/leaflet@1.9.4/dist/leaflet.js
   - assets/js/mobile-nav.js
   - assets/js/iss-tracker.js
-  - assets/js/movies-terminal.js
+  # - assets/js/movies-terminal.js     # only the parked movies demo uses this
   - assets/js/weather-map.js
   - assets/js/diffraction-rings.js
 

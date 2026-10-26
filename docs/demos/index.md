@@ -4,7 +4,7 @@ icon: material/play-circle-outline
 
 # Demos
 
-Four interactive pages, each rewritten from one of my Python projects (a Flask app, a scraper, a few
+Three interactive pages, each rewritten from one of my Python projects (a Flask app, a few
 notebooks) to run in your browser. Nothing to install and no account needed. Pick one to open it.
 
 <div class="grid demo-cards" markdown>
@@ -22,22 +22,6 @@ moves. Updates every 5 seconds.
 <span class="demo-card__tag">:material-map-outline: Map</span>
 
 [Open ISS Tracker :material-arrow-right:](iss-tracker.md){ .demo-card__link }
-
-</div>
-
-<div class="card demo-card demo-card--movies" markdown>
-
-:material-movie-open-outline:{ .demo-card__icon }
-
-## Strasbourg Movie Showtimes
-
-Today's showtimes at the 5 Strasbourg cinemas, filtered by genre, language or format from a terminal-style
-command line.
-
-<span class="demo-card__tag">:material-calendar-today: Updated daily</span>
-<span class="demo-card__tag">:material-console: Terminal</span>
-
-[Open Movie Showtimes :material-arrow-right:](movies.md){ .demo-card__link }
 
 </div>
 

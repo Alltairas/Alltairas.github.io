@@ -1,6 +1,6 @@
 # Alltairas.github.io
 
-Personal site with my CV, projects, interactive demos and occasional blog posts. Built with
+Personal site with my CV, projects and interactive demos. Built with
 [MkDocs](https://www.mkdocs.org/) and the [Material](https://squidfunk.github.io/mkdocs-material/) theme,
 and deployed to GitHub Pages with GitHub Actions.
 
@@ -30,7 +30,6 @@ Then open http://127.0.0.1:8000/.
 mkdocs.yml                     Site config, theme, navigation
 docs/                          Page content (Markdown)
 ├── demos/                     One page per interactive demo
-├── blog/
 └── assets/                    CSS, JS for the demos, images, CV (PDF), GeoJSON data
 .github/workflows/deploy.yml   Build + deploy on every push to main
 ```

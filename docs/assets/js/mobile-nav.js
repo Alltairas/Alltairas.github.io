@@ -1,16 +1,5 @@
 // Phone navigation helpers; the reasoning is in assets/css/mobile-nav.css.
 (function () {
-  // Pulse the Menu and Search buttons on the first page of a browser session,
-  // so a new visitor notices them without being nagged on every click.
-  try {
-    if (!sessionStorage.getItem('nav-hint-seen')) {
-      sessionStorage.setItem('nav-hint-seen', '1');
-      document.documentElement.classList.add('nav-hint');
-    }
-  } catch (e) {
-    // Storage blocked: skip the hint rather than replay it on every page.
-  }
-
   const list = document.querySelector('.md-tabs__list');
   if (!list) return;
 

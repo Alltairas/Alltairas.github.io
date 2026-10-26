@@ -31,17 +31,19 @@
   background-position: 0 0, center calc(var(--banner-top) - 2.4rem);
 }
 
-/* A soft dark halo under the white labels, so a tab that lands on the dense
-   cluster of dots stays readable without darkening the whole picture. */
+/* A soft dark halo under the white labels, so text that lands on the dense
+   cluster of dots stays readable without darkening the whole picture.
+
+   The tab links are no longer in this list: header-tabs.css gives each one a
+   filled pill, which is a surface rather than a shadow, and stacking the halo
+   on top of the fill only blurred the letters. */
 .md-header__title,
 .md-header__button,
-.md-header__source,
-.md-tabs__link {
+.md-header__source {
   text-shadow: 0 0 .1rem rgb(0 0 0 / 90%), 0 0 .5rem rgb(0 0 0 / 80%);
 }
 
 .md-header__button svg,
-.md-header__source svg,
-.md-tabs__link svg {
+.md-header__source svg {
   filter: drop-shadow(0 0 .2rem rgb(0 0 0 / 80%));
 }

@@ -1,0 +1,70 @@
+/* The tab strip as pills, built from the same recipe as the Menu and Search
+   buttons in mobile-nav.css.
+
+   The banner photo runs white lines and bright dots straight through the tab
+   row, and white text on a white line is the one case a text-shadow cannot
+   rescue — the halo only thickens the smudge. Each label gets a filled pill
+   instead, so it carries a surface of its own whatever happens to be in the
+   picture behind it. Reusing the header buttons' shape is the point: the two
+   rows then read as one set of controls rather than buttons on top and bare
+   words underneath. */
+
+/* The pill is the link, so the item is left to centre it inside Material's
+   fixed 2.4rem row and to space the pills apart. */
+.md-tabs__item {
+  display: flex;
+  align-items: center;
+  padding-left: .2rem;
+  padding-right: .2rem;
+}
+
+.md-tabs__link {
+  /* Material centres the bare label with a top margin. The flex item above
+     does that job now, and the margin would sit the pill too low. */
+  margin-top: 0;
+  padding: .3rem .7rem;
+  border-radius: 1rem;
+  /* The header buttons' wash is a tint of the text colour, which on a white
+     label is grey behind white — the two are too close to tell apart. Black at
+     90% instead: the pill reads as a hole punched in the picture, white text
+     on near-black, and the 10% that shows through is only enough to keep the
+     banner from looking cut up. */
+  background-color: rgb(0 0 0 / 90%);
+  /* .7rem is Material's default and is small for a primary nav; .78rem is a
+     step up that still clears the 2.4rem row, so nothing reflows. */
+  font-size: .78rem;
+  font-weight: 700;
+  /* Material dims an inactive tab with opacity, which would fade the pill
+     along with its label and undo the contrast the pill exists for. Dim the
+     text colour instead and let every pill keep the same solid fill. */
+  opacity: 1;
+  color: color-mix(in srgb, var(--md-primary-bg-color) 75%, transparent);
+  /* Material's own values, repeated because the shorthand replaces them, plus
+     the two properties these rules animate. */
+  transition:
+    transform .4s cubic-bezier(.1, .7, .1, 1),
+    opacity .25s,
+    background-color .25s,
+    color .25s;
+}
+
+/* Every pill now carries the same black fill, so "you are here" can no longer
+   be the fill itself. Full-strength text plus a hairline ring in the header's
+   text colour marks it instead — visible against black, and it costs no width,
+   so the pills don't shift as you move between pages. */
+.md-tabs__item--active .md-tabs__link {
+  color: var(--md-primary-bg-color);
+  box-shadow: inset 0 0 0 .075rem color-mix(in srgb, var(--md-primary-bg-color) 60%, transparent);
+}
+
+.md-tabs__link:hover,
+.md-tabs__link:focus {
+  background-color: #000;
+  color: var(--md-primary-bg-color);
+}
+
+/* The Demos icon sits inside the pill; demo-cards.css tints it green, which is
+   bright enough on the fill that it needs no shadow of its own. */
+.md-tabs__link > svg {
+  flex-shrink: 0;
+}
